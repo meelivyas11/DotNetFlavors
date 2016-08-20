@@ -1,0 +1,35 @@
+﻿@model MVC_App.Models.PersonModel
+@{
+    ViewBag.Title = "EnterPersonDetails";
+}
+<html>
+<head>
+    <title>EnterPersonDetails</title>
+</head>
+<body>
+    @using (Html.BeginForm("SavePersonDetails", "Person", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.DOB)
+            @Html.EditorFor(m => m.DOB)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.State)
+            @Html.TextBoxFor(m => m.State)
+        </div>
+        <div>
+            <input type="submit" value="Save Person Details" />
+        </div>
+    }
+</body>
+</html>
+
+
