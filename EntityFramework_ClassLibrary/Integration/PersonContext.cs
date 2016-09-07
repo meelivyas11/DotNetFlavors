@@ -1,4 +1,5 @@
 ﻿using EntityFramework_ClassLibrary;
+using EntityFramework_ClassLibrary.Domain.Model;
 using System.Data.Entity;
 
 namespace EntityFramework_ClassLibrary.Integration
@@ -11,5 +12,6 @@ namespace EntityFramework_ClassLibrary.Integration
         }
 
         public DbSet<PersonEntity> PersonDetailTable { get; set; }
+        public DbSet<UserEntity> UserTable { get; set; }
     }
 }

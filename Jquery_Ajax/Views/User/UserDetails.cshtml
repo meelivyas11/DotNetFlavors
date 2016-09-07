@@ -1,0 +1,32 @@
+﻿@model Jquery_Ajax.Models.UserModal
+
+@{
+    ViewBag.Title = "UserDetails";
+}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<h2>UserDetails</h2>
+<form id="User-form" role="form">
+    Enter user id : @Html.TextBoxFor(model => model.Id, new { id = "user-id"}) 
+    <br/><br />
+    <button class="button" type="submit" id="show-alert">Show Alert</button>
+    <button class="button" type="submit" id="make-ajax-call">Call Ajax</button>
+</form>
+
+<br/>
+
+<div>
+    <b>Data Received by making Ajax Call:</b>
+    <br /><br />
+    First Name: @Html.TextBoxFor(model => model.FirstName, new { id = "user-firstname" })
+    <br /><br />
+    Last Name: @Html.TextBoxFor(model => model.LastName, new { id = "user-lastname" })
+</div>
+
+<script>
+    var url = "/Scripts/myScripts/User/userDetails.js";
+    $.getScript(url);
+</script>
+
+

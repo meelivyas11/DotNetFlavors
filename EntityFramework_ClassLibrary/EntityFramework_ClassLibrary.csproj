@@ -51,11 +51,16 @@
   <ItemGroup>
     <Compile Include="Business\Implementation\PersonService.cs" />
     <Compile Include="Business\Interface\IPersonService.cs" />
+    <Compile Include="Domain\Model\UserEntity.cs" />
     <Compile Include="Integration\PersonContext.cs" />
     <Compile Include="Domain\Model\PersonEntity.cs" />
     <Compile Include="Migrations\201607182036513_Initial_Load.cs" />
     <Compile Include="Migrations\201607182036513_Initial_Load.Designer.cs">
       <DependentUpon>201607182036513_Initial_Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609071708583_Adding UserTable.cs" />
+    <Compile Include="Migrations\201609071708583_Adding UserTable.Designer.cs">
+      <DependentUpon>201609071708583_Adding UserTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607182036513_Initial_Load.resx">
       <DependentUpon>201607182036513_Initial_Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609071708583_Adding UserTable.resx">
+      <DependentUpon>201609071708583_Adding UserTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

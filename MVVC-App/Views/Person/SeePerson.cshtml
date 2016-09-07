@@ -1,0 +1,18 @@
+﻿@model MVVC_App.Models.SeePersonViewModel
+
+@{
+    ViewBag.Title = "ViewPerson";
+}
+
+<h2>See People</h2>
+
+@foreach (var item in Model)
+{
+    <div class="panel">
+        <h5> Title: @item.Title </h5>
+        <h5> Author Name : @item.AuthorName </h5>
+        <h5> Price: @item.Price </h5>
+    </div>
+
+}
+

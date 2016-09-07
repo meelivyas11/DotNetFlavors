@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFramework_ClassLibrary
+namespace EntityFramework_ClassLibrary.Domain.Model
 {
    public class PersonEntity
     {

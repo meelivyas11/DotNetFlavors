@@ -1,4 +1,5 @@
 ﻿using EntityFramework_ClassLibrary.Business.Interface;
+using EntityFramework_ClassLibrary.Domain.Model;
 using EntityFramework_ClassLibrary.Integration;
 using System;
 

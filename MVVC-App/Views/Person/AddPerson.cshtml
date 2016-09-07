@@ -1,0 +1,29 @@
+﻿@model MVVC_App.Models.AddPersonViewModel
+@{
+    ViewBag.Title = "EnterPersonDetails";
+}
+
+<h2>Enter Person Details</h2>
+
+<div>
+    @using (Html.BeginForm("Person", "Add", FormMethod.Post))
+    {
+
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.Price)
+            @Html.TextBoxFor(m => m.Price)
+        </div>
+
+        <input type="submit" value="Add Book" />
+    }
+</div>
