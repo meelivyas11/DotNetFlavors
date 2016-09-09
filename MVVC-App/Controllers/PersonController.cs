@@ -1,4 +1,5 @@
-﻿using EntityFramework_ClassLibrary.Business.Implementation;
+﻿using AutoMapper;
+using EntityFramework_ClassLibrary.Business.Implementation;
 using EntityFramework_ClassLibrary.Business.Interface;
 using EntityFramework_ClassLibrary.Domain.Model;
 using MVVC_App.Models;
@@ -35,12 +36,16 @@ namespace MVVC_App.Controllers
             // Add Dependency on EntityFramework_ClassLibrary Project to use PersonEntity
 
             // Transfering values from ViewModel to Entity - Start
+            /*
             PersonEntity personEntity = new PersonEntity();
             personEntity.FirstName = model.FirstName;
             personEntity.LastName = model.LastName;
             personEntity.DOB = model.DOB;
             personEntity.State = model.State;
+            */
             // Transfering values from ViewModel to Entity - End
+
+            PersonEntity personEntity = Mapper.Map<PersonEntity>(model);
 
             // Call PersonService to save the PersonEntity
             IPersonService personService = new PersonService();
@@ -55,19 +60,24 @@ namespace MVVC_App.Controllers
             IPersonService personService = new PersonService();
             List<PersonEntity> personList = personService.GetAllPersonDetails();
 
-            IList<SeePersonViewModel> seePersonViewModelList = new List<SeePersonViewModel>();
             // Transfering data from Entity to ViewModle - Start
+            /*
+            IList<SeePersonViewModel> seePersonViewModelList = new List<SeePersonViewModel>();
             foreach (var person in personList)
             {
                 SeePersonViewModel newModel = new SeePersonViewModel();
                 newModel.FirstName = person.FirstName;
                 newModel.LastName = person.LastName;
                 newModel.DOB = person.DOB;
-                newModel.State = person.State;
+                newModel.PersonState = person.State;
 
                 seePersonViewModelList.Add(newModel);
             }
+            */
             // Transfering data from Entity to ViewModle - End
+
+            IList<SeePersonViewModel> seePersonViewModelList = Mapper.Map<List<SeePersonViewModel>>(personList);
+
             return View(seePersonViewModelList);
         }
     }

@@ -10,6 +10,6 @@ namespace MVVC_App.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DOB { get; set; }
-        public string State { get; set; }
+        public string PersonState { get; set; }
     }
 }
