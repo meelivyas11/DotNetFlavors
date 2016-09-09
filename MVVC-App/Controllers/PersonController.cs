@@ -33,25 +33,25 @@ namespace MVVC_App.Controllers
         [HttpPost]
         public ActionResult AddPerson(AddPersonViewModel model)
         {
-            // Add Dependency on EntityFramework_ClassLibrary Project to use PersonEntity
+            if (ModelState.IsValid)
+            {
+                // Transfering values from ViewModel to Entity - Start
+                PersonEntity personEntity = Mapper.Map<PersonEntity>(model);
+                // Transfering values from ViewModel to Entity - End
 
-            // Transfering values from ViewModel to Entity - Start
-            /*
-            PersonEntity personEntity = new PersonEntity();
-            personEntity.FirstName = model.FirstName;
-            personEntity.LastName = model.LastName;
-            personEntity.DOB = model.DOB;
-            personEntity.State = model.State;
-            */
-            // Transfering values from ViewModel to Entity - End
+                // Call PersonService to save the PersonEntity
+                IPersonService personService = new PersonService();
+                personService.SavePersonDetails(personEntity);
 
-            PersonEntity personEntity = Mapper.Map<PersonEntity>(model);
-
-            // Call PersonService to save the PersonEntity
-            IPersonService personService = new PersonService();
-            personService.SavePersonDetails(personEntity);
-
-            return RedirectToAction("SeePerson");
+                return RedirectToAction("SeePerson");
+            }
+            else
+            { 
+                model.StateList = new List<SelectListItem>();
+                model.StateList.Add(new SelectListItem() { Text = "ME", Value = "ME" });
+                model.StateList.Add(new SelectListItem() { Text = "AZ", Value = "AZ" });
+                return View(model);
+            }
         }
 
         [HttpGet]
