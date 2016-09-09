@@ -1,4 +1,4 @@
-﻿@model MVVC_App.Models.SeePersonViewModel
+﻿@model IList<MVVC_App.Models.SeePersonViewModel>
 
 @{
     ViewBag.Title = "ViewPerson";
@@ -9,9 +9,9 @@
 @foreach (var item in Model)
 {
     <div class="panel">
-        <h5> Title: @item.Title </h5>
-        <h5> Author Name : @item.AuthorName </h5>
-        <h5> Price: @item.Price </h5>
+        <h5> Name: @item.FirstName @item.LastName </h5>
+        <h5> Date of Birth: @item.DOB </h5>
+        <h5> State: @item.State</h5>
     </div>
 
 }

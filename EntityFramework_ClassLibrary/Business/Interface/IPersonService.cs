@@ -10,5 +10,6 @@ namespace EntityFramework_ClassLibrary.Business.Interface
     public interface IPersonService
     {
         void SavePersonDetails(PersonEntity personEntity);
+        List<PersonEntity> GetAllPersonDetails();
     }
 }

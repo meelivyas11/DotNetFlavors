@@ -1,12 +1,12 @@
 ﻿@model MVVC_App.Models.AddPersonViewModel
 @{
-    ViewBag.Title = "EnterPersonDetails";
+    ViewBag.Title = "Add Person";
 }
 
-<h2>Enter Person Details</h2>
+<h2>Add Person</h2>
 
 <div>
-    @using (Html.BeginForm("Person", "Add", FormMethod.Post))
+    @using (Html.BeginForm("AddPerson", "Person", FormMethod.Post))
     {
 
         <div>
@@ -20,10 +20,15 @@
         </div>
 
         <div>
-            @Html.LabelFor(m => m.Price)
-            @Html.TextBoxFor(m => m.Price)
+            @Html.LabelFor(m => m.DOB)
+            @Html.TextBoxFor(m => m.DOB)
         </div>
 
-        <input type="submit" value="Add Book" />
+        <div>
+            @Html.LabelFor(m => m.State)
+            @Html.DropDownListFor(m => m.State, Model.StateList)
+        </div>
+
+        <input type="submit" value="Add Person" />
     }
 </div>

@@ -2,6 +2,8 @@
 using EntityFramework_ClassLibrary.Domain.Model;
 using EntityFramework_ClassLibrary.Integration;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EntityFramework_ClassLibrary.Business.Implementation
 {
@@ -14,6 +16,14 @@ namespace EntityFramework_ClassLibrary.Business.Implementation
             ctx.SaveChanges();
 
         }
+
+        public List<PersonEntity> GetAllPersonDetails()
+        {
+            PersonContext ctx = new PersonContext();
+            List<PersonEntity> personDetailsList = ctx.PersonDetailTable.ToList();
+            return personDetailsList;
+        }
+
     }
 }
 
