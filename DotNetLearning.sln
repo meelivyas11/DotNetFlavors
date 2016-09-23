@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jquery_Ajax", "Jquery_Ajax\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVC-App", "MVVC-App\MVVC-App.csproj", "{B67650A9-C1B9-49CD-83DB-8BACEA0325F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI-App", "WebAPI-App\WebAPI-App.csproj", "{A062012B-7A31-49F1-94B9-E3316F5883E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B67650A9-C1B9-49CD-83DB-8BACEA0325F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B67650A9-C1B9-49CD-83DB-8BACEA0325F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B67650A9-C1B9-49CD-83DB-8BACEA0325F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A062012B-7A31-49F1-94B9-E3316F5883E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A062012B-7A31-49F1-94B9-E3316F5883E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A062012B-7A31-49F1-94B9-E3316F5883E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A062012B-7A31-49F1-94B9-E3316F5883E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
