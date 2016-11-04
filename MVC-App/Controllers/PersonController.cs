@@ -52,5 +52,11 @@ namespace MVC_App.Controllers
         {
             return View();
         }
+
+        public ActionResult TestButton(PersonModel personModel,  string buttonName)
+        {
+            string aa = "meeli";
+            return null;
+        }
     }
 }

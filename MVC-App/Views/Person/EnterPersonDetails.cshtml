@@ -1,4 +1,5 @@
-﻿@model MVC_App.Models.PersonModel
+﻿
+@model MVC_App.Models.PersonModel
 @{
     ViewBag.Title = "EnterPersonDetails";
 }
@@ -9,10 +10,10 @@
 <body>
     @using (Html.BeginForm("SavePersonDetails", "Person", FormMethod.Post))
     {
-        <div>
+        @*<div>
             @Html.LabelFor(m => m.FirstName)
             @Html.TextBoxFor(m => m.FirstName)
-        </div>
+        </div>*@
         <div>
             @Html.LabelFor(m => m.LastName)
             @Html.TextBoxFor(m => m.LastName)
@@ -29,6 +30,14 @@
             <input type="submit" value="Save Person Details" />
         </div>
     }
+
+    // Sending Parameter through 
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+    @Model
+    <input type="submit" id="aaa" value="aaa" onclick="location.href='@Url.Action("TestButton", "Person", new { Model, buttonName = "aaa" })'" />
 </body>
 </html>
 

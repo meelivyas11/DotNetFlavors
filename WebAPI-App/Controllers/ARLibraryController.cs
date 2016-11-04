@@ -5,23 +5,27 @@ using WebAPI_App.Models;
 
 namespace WebAPI_App.Controllers
 {
-    public class LibraryController : ApiController
+    [RoutePrefix("ARapi/Library")]
+    public class ARLibraryController : ApiController
     {
         public static IDictionary<int, BookModel> _bookModelDict = new Dictionary<int, BookModel>();
 
-        // GET: api/Library
+        // GET: ARapi/Library/Books 
+        [Route("Books")]
         public IList<BookModel> Get()
         {
             return _bookModelDict.Values.ToList();
         }
 
-        // GET: api/Library/5
+        // GET: /ARapi/Library?Id=0 (Attribute Routing URL)
+        [Route("{Id=int}")]
         public BookModel Get(int id)
         {
             return _bookModelDict[id];
         }
 
-        // POST: api/Library
+        // POST: ARapi/Library/Book (Attribute Routing URL)
+        [Route("Book")]
         public void Post(BookModel value)
         {
             int maxId = _bookModelDict.Count() > 0 ? _bookModelDict.Keys.Max() + 1 : 0;
@@ -29,7 +33,8 @@ namespace WebAPI_App.Controllers
             _bookModelDict.Add(maxId, value);
         }
 
-        // PUT: api/Library/5
+        // PUT: ARapi/Library?Id=0 (Attribute Routing URL)
+        [Route("{Id=int}")]
         public void Put(int id,BookModel value)
         {
             int orgBookId = _bookModelDict[id].Id;
@@ -37,7 +42,8 @@ namespace WebAPI_App.Controllers
             _bookModelDict[id] = value;
         }
 
-        // DELETE: api/Library/5
+        // DELETE: ARapi/Library?Id=0 (Attribute Routing URL)
+        [Route("{Id=int}")]
         public void Delete(int id)
         {
             _bookModelDict.Remove(id);

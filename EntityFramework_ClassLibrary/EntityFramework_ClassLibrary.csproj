@@ -75,6 +75,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609071708583_Adding UserTable.resx">
       <DependentUpon>201609071708583_Adding UserTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

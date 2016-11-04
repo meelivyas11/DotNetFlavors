@@ -232,7 +232,10 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Business\LibraryServiceProxy.cs" />
+    <Compile Include="Controllers\ARLibraryController.cs" />
     <Compile Include="Controllers\LibraryController.cs" />
+    <Compile Include="Controllers\WebAPIAppClientController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,7 +289,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -305,6 +310,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Book\" />
+    <Folder Include="Views\WebAPIAppClient\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
