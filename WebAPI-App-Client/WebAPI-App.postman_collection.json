@@ -1,0 +1,56 @@
+{
+	"id": "a28d83d0-b381-ec3b-07fb-1dad63af1885",
+	"name": "WebAPI-App",
+	"description": "",
+	"order": [
+		"5ec2ba01-3139-4a57-9629-f429d3862d8c",
+		"fb835fc5-0f9c-2257-a1e1-89ebe25445eb"
+	],
+	"folders": [],
+	"timestamp": 1477313971245,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "5ec2ba01-3139-4a57-9629-f429d3862d8c",
+			"headers": "Content-Type: application/json\nAccept: application/json\n",
+			"url": "http://localhost:53240/api/Library/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"collectionId": "a28d83d0-b381-ec3b-07fb-1dad63af1885",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:53240/api/Library",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1477313971245,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Body contains headers\"] = responseBody.has(\"headers\");\ntests[\"Body contains args\"] = responseBody.has(\"args\");\ntests[\"Body contains url\"] = responseBody.has(\"url\");\n\nvar responseJSON;\n\ntry { responseJSON = JSON.parse(responseBody); }\ncatch (e) { }\n\n\ntests[\"Args key contains argument passed as url parameter\"] = 'test' ",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n        \"Title\" : \"bookTitle\",\n        \"Author\" : \"bookAuthor\"\n}"
+		},
+		{
+			"id": "fb835fc5-0f9c-2257-a1e1-89ebe25445eb",
+			"headers": "",
+			"url": "http://localhost:53240/api/Library/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a28d83d0-b381-ec3b-07fb-1dad63af1885",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:53240/api/Library",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1477313985863,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
