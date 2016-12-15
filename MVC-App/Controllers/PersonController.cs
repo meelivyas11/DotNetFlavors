@@ -55,7 +55,7 @@ namespace MVC_App.Controllers
 
         public ActionResult TestButton(PersonModel personModel,  string buttonName)
         {
-            string aa = "meeli";
+            string tempVar = personModel.FirstName;
             return null;
         }
     }

@@ -10,10 +10,10 @@
 <body>
     @using (Html.BeginForm("SavePersonDetails", "Person", FormMethod.Post))
     {
-        @*<div>
+        <div>
             @Html.LabelFor(m => m.FirstName)
             @Html.TextBoxFor(m => m.FirstName)
-        </div>*@
+        </div>
         <div>
             @Html.LabelFor(m => m.LastName)
             @Html.TextBoxFor(m => m.LastName)
@@ -21,6 +21,7 @@
         <div>
             @Html.LabelFor(m => m.DOB)
             @Html.EditorFor(m => m.DOB)
+            (Date formate should be mm/dd/yy)
         </div>
         <div>
             @Html.LabelFor(m => m.State)
@@ -31,7 +32,9 @@
         </div>
     }
 
-    // Sending Parameter through 
+
+
+    ******************* Sending Parameter through button (Not Working) *************************
     <div>
         @Html.LabelFor(m => m.FirstName)
         @Html.TextBoxFor(m => m.FirstName)
