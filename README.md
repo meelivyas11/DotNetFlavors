@@ -1,10 +1,10 @@
 # What is it?
 This repository consist of following sample projects:
-	- `EntityFramework_ClassLibrary` project is used to save and Get data from database using Entity Framework.
-	- `MVC-App` web application is a simple MVC application which saves and person data.
-	- `MVVC-App' is a simple MVVC application.
-	- `WebAPI-App` application contains code to build a simple Web API and `WebAPI-App-Client` contains the "*.json" file which can be uploaded in Postman to call that WebAPIs.
-	- `Jquery_Ajax` contains code to show an alert on click of a button using Jquery. It also contains code to make a AJAX call to get information on click of the button.
+- `EntityFramework_ClassLibrary` project is used to save and Get data from database using Entity Framework.
+- `MVC-App` web application is a simple MVC application which saves and person data.
+- `MVVC-App' is a simple MVVC application.
+- `WebAPI-App` application contains code to build a simple Web API and `WebAPI-App-Client` contains the "*.json" file which can be uploaded in Postman to call that WebAPIs.
+- `Jquery_Ajax` contains code to show an alert on click of a button using Jquery. It also contains code to make a AJAX call to get information on click of the button.
 
 <b> Detailed steps to create these projects from scratch can be found from [here] (https://meelivyas.blogspot.com/2016/06/c-net-leaning.html) </b>
 
