@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
     // Show the alert box with User Id
-    $('#show-Alert').on('click', function () {
+    $('#show-alert').on('click', function () {
         var UserId = $("#user-id").val();
         alert("Entered User Id :" + UserId);
     });

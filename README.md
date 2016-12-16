@@ -32,7 +32,8 @@ This repository consist of following sample projects:
  - Run `Update-Database –Verbose` command from 'Package Manager Console' to create the database and tables.
  
 ### MVC Application
- - Update the value of "Data Source" related to the connectionString from `Web.config` file present inside `MVC-App` project of the repository. Make sure the connectionString present in 'App.config' of EntityFramework_ClassLibrary is same as that in 'Web.config' of `MVC-App` project.
+ - Get EntityFramework_ClassLibrary project working.
+ - Update *Data Source* value of the connectionString present in `Web.config` file of `MVC-App` project inline to the values in 'App.config' of EntityFramework_ClassLibrary project.
 ```xml
 <connectionStrings>
 	<add name="PersonContext"  providerName="System.Data.SqlClient" connectionString="Data Source=.\sqlexpress; Initial Catalog=PersonDB; Integrated Security=True; MultipleActiveResultSets=True"/>
@@ -42,7 +43,8 @@ This repository consist of following sample projects:
  - Clean, build and run the application
  
 ### MVVC Application
- - Update the value of "Data Source" related to the connectionString from `Web.config` file present inside `MVVC-App` project of the repository. Make sure the connectionString present in 'App.config' of EntityFramework_ClassLibrary is same as that in 'Web.config' of `MVVC-App` project.
+ - Get EntityFramework_ClassLibrary project working.
+ - Update *Data Source* value of the connectionString present in `Web.config` file of `MVVC-App` project inline to the values in 'App.config' of EntityFramework_ClassLibrary project.
 ```xml
 <connectionStrings>
 	<add name="PersonContext"  providerName="System.Data.SqlClient" connectionString="Data Source=.\sqlexpress; Initial Catalog=PersonDB; Integrated Security=True; MultipleActiveResultSets=True"/>
@@ -72,7 +74,7 @@ This repository consist of following sample projects:
  - Enter first name, last name, DOB  and State information and click 'Add Person'. This will save person data and redirect to the page which shows all the person data from the database mentioned in the ConnectionString . 
  
 ## Web API and its Client
- - <http://localhost:53240/WebAPIAppClient/AddBook?title=bT1&author=BA1> and http://localhost:53240/WebAPIAppClient/SeeAllBooks> calls Post/Get Web API through a client code.
+ - <http://localhost:53240/WebAPIAppClient/AddBook?title=bT1&author=BA1> and <http://localhost:53240/WebAPIAppClient/SeeAllBooks> calls Post/Get Web API through a client code.
  - Import the Postman collection present in `WebAPI-App-Client` folder of the repository to see the results. [Here] (https://meelivyas.blogspot.com/p/download-and-install-postman-httpswww.html) are the steps to upload and test Web APIs
 
 ## Jquery and AJAX
