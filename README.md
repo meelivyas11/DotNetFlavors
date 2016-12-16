@@ -2,7 +2,7 @@
 This repository consist of following sample projects:
 - `EntityFramework_ClassLibrary` project creates database/tables using Entity Framework (code first approach). This project also contains code to save and get person details from database.
 - `MVC-App` web application is a simple MVC application which saves and person data.
-- `MVVC-App` is a simple MVVC application to saves and retrives person details.
+- `MVVC-App` is a simple MVVC application to saves and retrives person details. This project contains code for mapper config, client side validation and dropdown creation.
 - `WebAPI-App` application contains code to build a simple Web API to add/see books and `WebAPI-App-Client` contains the "*.json" file which can be uploaded in Postman to call that WebAPIs.
 - `Jquery_Ajax` contains code to show an alert on click of a button using Jquery. It also contains code to make a AJAX call to get information on click of the button.
 

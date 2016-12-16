@@ -39,6 +39,9 @@ namespace MVVC_App.Controllers
                 PersonEntity personEntity = Mapper.Map<PersonEntity>(model);
                 // Transfering values from ViewModel to Entity - End
 
+                // Change the Date if its not valid (Server side validation/correction)
+                personEntity.DOB = model.DOB <= DateTime.MinValue ? DateTime.Now : model.DOB;
+
                 // Call PersonService to save the PersonEntity
                 IPersonService personService = new PersonService();
                 personService.SavePersonDetails(personEntity);
@@ -50,6 +53,21 @@ namespace MVVC_App.Controllers
                 model.StateList = new List<SelectListItem>();
                 model.StateList.Add(new SelectListItem() { Text = "ME", Value = "ME" });
                 model.StateList.Add(new SelectListItem() { Text = "AZ", Value = "AZ" });
+
+                List<string> errors = new List<string>();
+                foreach (var item in ModelState.Values)
+                {
+                    if (item.Errors.Count > 0)
+                    {
+                        errors.Add(item.Errors[0].ErrorMessage);
+                    }
+                }
+                foreach (var item2 in errors)
+                {
+                    // this sends a list of errors for the  @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger"})
+                    ModelState.AddModelError("Meeli", item2);
+                }
+
                 return View(model);
             }
         }
