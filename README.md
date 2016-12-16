@@ -3,7 +3,7 @@ This repository consist of following sample projects:
 - `EntityFramework_ClassLibrary` project is used to save and Get data from database using Entity Framework.
 - `MVC-App` web application is a simple MVC application which saves and person data.
 - `MVVC-App` is a simple MVVC application.
-- `WebAPI-App` application contains code to build a simple Web API and `WebAPI-App-Client` contains the "*.json" file which can be uploaded in Postman to call that WebAPIs.
+- `WebAPI-App` application contains code to build a simple Web API to add/see books and `WebAPI-App-Client` contains the "*.json" file which can be uploaded in Postman to call that WebAPIs.
 - `Jquery_Ajax` contains code to show an alert on click of a button using Jquery. It also contains code to make a AJAX call to get information on click of the button.
 
 <b> Detailed steps to create these projects from scratch can be found from [here] (https://meelivyas.blogspot.com/2016/06/c-net-leaning.html) </b>
@@ -13,6 +13,7 @@ This repository consist of following sample projects:
  - Git Bash: <https://git-scm.com/>
  - Visual Studio
  - SQL Server Management Studio
+ - Postman (Only for WebAPI-App project)
 
 ## Environment Setup
  - Clone the repository using `git clone https://github.com/meelivyas11/DotNetFlavors.git` from Git Bash
@@ -51,8 +52,12 @@ This repository consist of following sample projects:
  - Clean, build and run the application
 
 ### Web API and its Client
-
+ - Set `WebAPI-App` as Startup Project
+ - Clean, build and run the application
+ 
 ### Jquery and AJAX
+ - Set `Jquery_Ajax` as Startup Project
+ - Clean, build and run the application
 
 # How Do I use it?
 ## Entity Framework
@@ -67,5 +72,9 @@ This repository consist of following sample projects:
  - Enter first name, last name, DOB  and State information and click 'Add Person'. This will save person data and redirect to the page which shows all the person data from the database mentioned in the ConnectionString . 
  
 ## Web API and its Client
+ - <http://localhost:53240/WebAPIAppClient/AddBook?title=bT1&author=BA1> and http://localhost:53240/WebAPIAppClient/SeeAllBooks> calls Post/Get Web API through a client code.
+ - Import the Postman collection present in `WebAPI-App-Client` folder of the repository to see the results. [Here] (https://meelivyas.blogspot.com/p/download-and-install-postman-httpswww.html) are the steps to upload and test Web APIs
 
 ## Jquery and AJAX
+ - Open <http://localhost:49553/User/UserDetails> in your browser
+ - Enter any User id (e.g. 102) and hit `Show Alert` to see JQuery code working and hit `Call Ajax` button to see AJAX code working 
