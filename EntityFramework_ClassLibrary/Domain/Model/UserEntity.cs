@@ -12,6 +12,8 @@ namespace EntityFramework_ClassLibrary.Domain.Model
     {
         // UserEntityId is the Primary Key of this table
         public int Id { get; set; }
+
+        // Create Index on UserName
         [Index("UserNameIndex", IsUnique = true)]
         [MaxLength(20)]
         public string UserName { get; set; }
