@@ -5,6 +5,7 @@
 }
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 @Scripts.Render("~/Scripts/myScripts/User/userDetails.js")
 
 <h2>UserDetails</h2>
@@ -25,9 +26,30 @@
     Last Name: @Html.TextBoxFor(model => model.LastName, new { id = "user-lastname" })
 </div>
 
+<br />
+
+<!-- <button class="button" type="submit" id="show-modal" data-toggle="modal" data-target="#SimpleModal">Show Modal</button>  // without JQuery -->
+<button class="button" type="submit" id="show-modal" data-toggle="modal">Show Modal</button>
+
+<div id="SimpleModal" class="modal fade" role="dialog"> 
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"> Modal Title</h4>
+            </div>
+            <div class="modal-body">
+                <p> Hello World, This is demo modal</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     var url = "/Scripts/myScripts/User/userDetails.js";
     $.getScript(url);
 </script>
+
 
 

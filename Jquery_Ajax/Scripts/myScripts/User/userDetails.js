@@ -25,6 +25,13 @@
         // avoid to execute the actual submit of the form.
         ev.preventDefault();
     });
+
+
+    // Fade the background and show the modal
+    $('#show-modal').on('click', function () {
+        $.data('target', '#SimpleModal');
+        $('#SimpleModal').modal('show');
+    });
 });
 
 
