@@ -1,18 +1,19 @@
 # What is it?
 This repository consist of following sample projects:
-- `EntityFramework_ClassLibrary` project creates database/tables using Entity Framework (code first approach). This project also contains code to save and get person details from database.
+- `EntityFramework_ClassLibrary` project creates database/tables using Entity Framework (code first approach). This project also contains code to save and get person details from database. It also contains code to create unique index and foreign key constrain.
 - `MVC-App` web application is a simple MVC application which saves and person data.
 - `MVVC-App` is a simple MVVC application to saves and retrives person details. This project contains code for mapper config, client side validation and dropdown creation.
 - `WebAPI-App` application contains code to build a simple Web API to add/see books and `WebAPI-App-Client` contains the "*.json" file which can be uploaded in Postman to call that WebAPIs.
-- `Jquery_Ajax` contains code to show an alert on click of a button using Jquery. It also contains code to make a AJAX call to get information on click of the button.
+- `Jquery_Ajax` contains code to show an alert and modal on click of a button using Jquery. It also contains code to make a AJAX call to get information on click of the button 
 
 <b> Detailed steps to create these projects from scratch can be found from [here] (https://meelivyas.blogspot.com/2016/06/c-net-leaning.html) </b>
 
 # How to Set up?
 ## Software Requirements 
- - Git Bash: <https://git-scm.com/>
- - Visual Studio
- - SQL Server Management Studio
+ - [Git Bash] (https://git-scm.com/)
+ - [Visual Studio] (https://www.visualstudio.com/downloads/)
+ - [Microsoft SQL Server 2012] (https://www.microsoft.com/en-us/download/details.aspx?id=29062)
+ - [SQL Server Management Studio] (https://msdn.microsoft.com/en-us/library/mt238290.aspx)
  - Postman (Only for WebAPI-App project)
 
 ## Environment Setup
@@ -79,4 +80,5 @@ This repository consist of following sample projects:
 
 ## Jquery and AJAX
  - Open <http://localhost:49553/User/UserDetails> in your browser
- - Enter any User id (e.g. 102) and hit `Show Alert` to see JQuery code working and hit `Call Ajax` button to see AJAX code working 
+ - Enter any User id (e.g. 102) and hit `Show Alert` to see JQuery code working and hit `Call Ajax` button to see AJAX code working.
+ - Click on 'Show Modal' button to see the Modal
